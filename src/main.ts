@@ -3,6 +3,8 @@ import './style.css'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+//引入路由
+import router from './router'
 //@ts-ignore
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 //svg
@@ -14,4 +16,6 @@ app.use(ElementPlus, {
   locale: zhCn,
 })
 app.use(globalComponent)
+//注册路由
+app.use(router)
 app.mount('#app')
