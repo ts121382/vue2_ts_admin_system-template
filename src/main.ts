@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
@@ -10,6 +9,11 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 //svg
 import 'virtual:svg-icons-register'
 import globalComponent from '@/components'
+//全局scss
+import '@/styles/index.scss'
+//pinia
+import pinia from '@/store'
+
 
 const app = createApp(App)
 app.use(ElementPlus, {
@@ -18,4 +22,6 @@ app.use(ElementPlus, {
 app.use(globalComponent)
 //注册路由
 app.use(router)
+//注册pinia
+app.use(pinia)
 app.mount('#app')

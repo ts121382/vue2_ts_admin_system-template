@@ -1,4 +1,5 @@
-export const constantRoute: Array<RouteRecordRaw> = [
+//Array<RouteRecordRaw>
+export const constantRoute = [
   // 登录
   {
     path: '/login',
@@ -19,6 +20,7 @@ export const constantRoute: Array<RouteRecordRaw> = [
       hidden: true,
     },
   },
+  // 其他任意路由
   {
     path: '/:pathMatch(.*)*',
     redirect: '/404',
@@ -43,9 +45,30 @@ export const constantRoute: Array<RouteRecordRaw> = [
         path: '/home',
         component: () => import('@/views/home/index.vue'),
         meta: {
-          title: '首页',
+          title: '主页',
           hidden: false,
-          icon: 'HomeFilled',
+          icon: 'House',
+        },
+      },
+    ],
+  },
+  //记录
+  {
+    path: '/record',
+    name: 'record',
+    component: () => import('@/layout/index.vue'),
+    meta: {
+      title: '',
+      hidden: false,
+    },
+    children: [
+      {
+        path: '/record/index',
+        component: () => import('@/views/record/index.vue'),
+        meta: {
+          title: '记录',
+          hidden: false,
+          icon: 'Collection',
         },
       },
     ],
