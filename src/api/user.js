@@ -1,8 +1,13 @@
 import request from '@/utils/request'
 
+const API = {
+  LOGIN: '/admin/account/login',
+  USERINFO: '/admin/account/getUserInfo'
+}
+
 export function login(data) {
   return request({
-    url: '/admin/account/login',
+    url: API.LOGIN,
     method: 'post',
     data
   })
@@ -10,7 +15,7 @@ export function login(data) {
 
 export function getInfo(token) {
   return request({
-    url: '/admin/account/getUserInfo',
+    url: API.USERINFO,
     method: 'get',
     params: { token }
   })

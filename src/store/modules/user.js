@@ -8,6 +8,7 @@ const state = {
   id: '',
   email: '',
   phoneNumber: null,
+  avatar: '',
   roles: []
 }
 
