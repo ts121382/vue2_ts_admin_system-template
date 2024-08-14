@@ -95,40 +95,16 @@ export const constantRoutes = [
       }
     ]
   },
-  // {
-  //   path: "/documentation",
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: "index",
-  //       component: () => import("@/views/documentation/index"),
-  //       name: "Documentation",
-  //       meta: { title: "Documentation", icon: "documentation", affix: true },
-  //     },
-  //   ],
-  // },
-  // {
-  //   path: "/guide",
-  //   component: Layout,
-  //   redirect: "/guide/index",
-  //   children: [
-  //     {
-  //       path: "index",
-  //       component: () => import("@/views/guide/index"),
-  //       name: "Guide",
-  //       meta: { title: "Guide", icon: "guide", noCache: true },
-  //     },
-  //   ],
-  // },
+
   {
-    path: '/profile',
+    path: '/userInfo',
     component: Layout,
-    redirect: '/profile/index',
+    redirect: '/userInfo/index',
     hidden: true,
     children: [
       {
         path: 'index',
-        component: () => import('@/views/profile/index'),
+        // component: () => import('@/views/profile/index'),
         name: 'Profile',
         meta: { title: 'Profile', icon: 'user', noCache: true }
       }
@@ -188,42 +164,6 @@ export const asyncRoutes = [
   // chartsRouter,
   // nestedRouter,
   // tableRouter,
-
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/list',
-    name: 'Example',
-    meta: {
-      title: '示例',
-      icon: 'el-icon-s-help'
-    },
-    children: [
-      {
-        path: 'create',
-        component: () => import('@/views/example/create'),
-        name: 'CreateArticle',
-        meta: { title: '写文章', icon: 'edit' }
-      },
-      {
-        path: 'edit/:id(\\d+)',
-        component: () => import('@/views/example/edit'),
-        name: 'EditArticle',
-        meta: {
-          title: 'Edit Article',
-          noCache: true,
-          activeMenu: '/example/list'
-        },
-        hidden: true
-      },
-      {
-        path: 'list',
-        component: () => import('@/views/example/list'),
-        name: 'ArticleList',
-        meta: { title: '文章列表', icon: 'list' }
-      }
-    ]
-  },
 
   // {
   //   path: "/error",
